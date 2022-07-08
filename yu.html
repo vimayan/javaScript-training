@@ -1,0 +1,53 @@
+
+<!DOCTYPE html> <!-- This is an HTML5 file -->
+<html> <!-- The root element -->
+<head> <!-- Title, scripts & styles go here -->
+<title>Digital rook Clock</title>
+<script> // A script of js code
+// Define a function to display the current time
+function displayTime() {
+ var elt = document.getElementById("lock"); // Find element with id="clock"
+ var now = new Date(); // Get current time
+ elt.innerHTML = now.toLocaleTimeString(); // Make elt display its
+ setTimeout(displayTime, 10); // Run again in 1 second
+}
+window.onload = displayTime; // Start displaying the time when document loads.
+</script>
+<style> /* A CSS stylesheet for the clock */
+#lock { /* Style apply to element with id="clock" */
+ font: bold 24pt sans; /* Use a big bold font */
+ background: #ddf; /* On a light bluish-gray background */
+ padding: 10px; /* Surround it with some space */
+ border: solid black 2px; /* And a solid black border */
+ border-radius: 10px; /* Round the corners (where supported) */
+}
+</style>
+</head>
+<body> <!-- The body is the displayed parts of the doc. -->
+<h1>Digital Clock</h1> <!-- Display a title -->
+<span id="lock"></span> <!-- The time gets inserted here -->
+<a href="javascript:new Date().toLocaleTimeString();">
+What time is it?
+</a>
+<a href='javascript:
+ var e = "fu", r = "ck"; /* Expression to evaluate and the result */
+ do {
+ /* Display expression and result and ask for a new expression */
+ e = prompt("Expression: " + e + "\n" + r + "\n", "5*5");
+ try { r = "Result: " + eval(e); } /* Try to evaluate the expression */
+ catch(ex) { r = ex; } /* Or remember the error instead */
+ } while(e); /* Continue until no expression entered or Cancel clicked */
+/* void 0;  This prevents the current document from being overwritten */
+ '>
+JavaScript Evaluator
+</a>
+<a href='javascript:do {
+    var name = prompt("What is your name?"); 
+    var correct = confirm("You entered " + name + "\n" +  "Click Okay to proceed or Cancel to re-enter.");
+   } while(!correct)
+   alert("Hello, " + name);
+'>name</a>
+
+
+</body>
+</html> -->
